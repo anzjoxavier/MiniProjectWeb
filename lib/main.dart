@@ -4,7 +4,7 @@ import 'dart:html';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 import 'package:flutter/material.dart';
 
-import 'package:projectapp/ServerPage.dart';
+import 'package:projectapp/ResultPage.dart';
 
 void main() {
   runApp(const MyApp());
