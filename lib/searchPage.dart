@@ -211,7 +211,7 @@ class _SearchPageState extends State<SearchPage> {
               SizedBox(
                 width: 0.60 * MediaQuery.of(context).size.width,
                 child: TextField(
-                  style: TextStyle(color: Colors.pinkAccent), 
+                  
                   cursorColor: Colors.redAccent,
                   controller: _textEditingController,
                   decoration: InputDecoration(
@@ -250,7 +250,7 @@ class _SearchPageState extends State<SearchPage> {
                       stopListening();
                     }
                     addTOHistory(dropdownvalue, _textEditingController.text);
-
+              
                     Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -261,9 +261,10 @@ class _SearchPageState extends State<SearchPage> {
                   } else {
                     final snackBar = SnackBar(
                       content: const Text('Text is Empty'),
-                      backgroundColor: (Colors.black12),
+                      backgroundColor: Colors.redAccent,
                       action: SnackBarAction(
-                        label: 'dismiss',
+                        textColor: Colors.white,
+                        label: 'Dismiss',
                         onPressed: () {},
                       ),
                     );
