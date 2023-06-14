@@ -6,11 +6,11 @@ import 'package:http/http.dart' as http;
 import 'package:projectapp/constants.dart';
 
 // ignore: must_be_immutable
-class ServerPage extends StatelessWidget {
+class ResultPage extends StatelessWidget {
   String voiceText = 'Content is Loading. Please Wait';
   final String sentance;
   final String dropdownvalue;
-  ServerPage({
+  ResultPage({
     Key? key,
     required this.sentance,
     required this.dropdownvalue,
@@ -55,13 +55,12 @@ class ServerPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        floatingActionButton:         CircleAvatar(
+        floatingActionButton: CircleAvatar(
           backgroundColor: Colors.green,
           radius: 20,
           child: IconButton(
-            
             padding: EdgeInsets.zero,
-            icon:const Icon(Icons.volume_up),
+            icon: const Icon(Icons.volume_up),
             color: Colors.white,
             onPressed: () {
               speak();
@@ -97,8 +96,8 @@ class ServerPage extends StatelessWidget {
             children: [
               Text(
                 "Given Comment: $sentance",
-                style: const TextStyle(
-                    fontSize: 18, fontWeight: FontWeight.bold),
+                style:
+                    const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
               const SizedBox(
                 height: 25,
@@ -140,8 +139,7 @@ class ServerPage extends StatelessWidget {
                         ));
                       } else {
                         object['toxic']['toxic'] == 1
-                            ? voiceText =
-                                "Given Comment, $sentance is toxic"
+                            ? voiceText = "Given Comment, $sentance is toxic"
                             : voiceText =
                                 "Given Comment, $sentance is not toxic";
                         speak();
