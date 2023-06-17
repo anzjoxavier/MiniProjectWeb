@@ -1,6 +1,6 @@
-# projectapp
+# Project App
 
-A new Flutter project.
+Flutter web developed for mini project. Flutter Text to Speech and Speech to Text included.
 
 ## Getting Started
 
